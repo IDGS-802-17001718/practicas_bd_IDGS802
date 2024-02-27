@@ -1,0 +1,21 @@
+{% extends 'layout2.html' %}
+
+{%block content%}
+{%import "_macros.html" as macros%}
+    <h1>Alumnos</h1>
+
+    <form action="/alumnos" method="post" novalidate>
+        {{form.csrf_token}}
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}"></input>
+        {{macros.input_form(form.nombre, class='form-control')}}
+        {{macros.input_form(form.email, class='form-control')}}
+        {{macros.input_form(form.edad, class='form-control')}}
+        {{macros.input_form(form.apaterno, class='form-control')}}
+        {{macros.input_form(form.amaterno, class='form-control')}}
+        <input type="submit" name="btn1">
+    </form>
+
+    <h1>Nombre: {{nom}}</h1>
+
+
+{%endblock%}
