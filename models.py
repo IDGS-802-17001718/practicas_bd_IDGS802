@@ -19,3 +19,11 @@ class Profesores(db.Model):
     matricula = db.Column(db.String(10), nullable=False)
     materia = db.Column(db.String(50), nullable=False)
     create_date = db.Column(db.DateTime, default=datetime.datetime.now)
+
+class Pizza(db.Model):
+    id=db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(50), nullable=False)
+    direccion = db.Column(db.String(50), nullable=False)
+    telefono = db.Column(db.String(50), nullable=False)
+    total = db.Column(db.Float, nullable=False)
+    create_date = db.Column(db.DateTime, default=datetime.datetime.now)
